@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales de la página */
+.body {
+    background: #ffffff;
+}
+
+/* Estilos del encabezado */
+.header {
+    background-color: #ffffff;
+    width: 100%;
+    margin: 40px 40px;
+    box-sizing: border-box;
+}
+
+.header-logo {
+    margin: 40px 0 0;
+    background-color: #ffffff;
+}
+
+/* Contenedor principal que agrupa las secciones de encriptar y desencriptar */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: calc(100vw - 40px);
+    height: calc(100vh - 0px);
+    background: #ffffff;
+    margin: 40px;
+}
+
+/* Sección para encriptar texto */
+.encriptar {
+    display: flex;
+    flex-direction: column;
+    width: 67%;
+    max-width: 600px;
+   }
+
+/* Área de texto donde se ingresa el contenido a encriptar */
+.texto {
+    width: 100%;
+    height: 50%;
+    border: none;
+    font-family: 'Lato', sans-serif; 
+    font-size: 16px;
+    line-height: 1.6;
+    color: #010326;
+    margin: 10px;
+    line-height: 150%;
+    background-color: #b1adbd;
+    resize: none;
+    padding: 12px 24px;
+    border-radius: 24px;
+   }
+
+/* Placeholder (texto de sugerencia) en el área de texto */
+.texto::placeholder {
+    font-family: 'Monotype Corsiva', cursive;
+    font-weight: 400; /* Peso de fuente normal para no exagerar el estilo */
+    font-size: 25px;
+    color: #010326; /* Color de texto que mantiene la legibilidad */
+}
+
+/* Elimina bordes y sombras cuando el área de texto está activa o en foco */
+.texto:focus,
+.texto:active {
+    border: none;
+    outline: none;
+}
+
+/* Estilos de la restriccion*/
+.terminos {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0px 0 0 40px;
+    color: #1f2020;
+    opacity: 0.8;
+}
+
+.icono-texto {
+    width: 20px;
+    height: auto;
+    margin-right: 8px;
+   }
+
+.terminos p {
+    font-family: 'Roboto';
+    font-size: 14px;
+    color: #1f1f1f;
+    justify-content: left;
+    }
+
+/* Contenedor para los botones de encriptar, desencriptar y copiar */
+.botones {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    width: calc(100% - 80px);
+}
+
+/* Botón de copiar, inicialmente oculto */
+.b-copiar {
+    display: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #202673;
+    background: #202673;
+    color: #fff;
+    width: 100%;
+}
+
+/* Estilos para los botones de encriptar y desencriptar */
+.b-encriptar,
+.b-desencriptar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    border-radius: 24px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 16px 32px;
+    width: calc((100% / 3) - 10px); /* Ancho automático basado en la cantidad de botones */
+    background-color: #202673;
+    color: #fff;
+}
+
+/* Estilo de hover para los tres botones */
+.b-encriptar:hover,
+.b-desencriptar:hover,
+.b-copiar:hover {
+    background-color: #090C33;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 2, 35, 0.2);
+}
+
+/* Transición visual al hacer clic en el botón de copiar */
+.b-copiar:active,
+.b-encriptar:active,
+.b-desencriptar:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(0, 2, 35, 0.3);
+    background-color: #000224;
+    color: #fff;
+}
+
+.b-encriptar:hover {
+    background-color: #090C33;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 2, 35, 0.2);
+}
+
+/* Estilo específico para el botón de desencriptar */
+.b-desencriptar {
+    background: #41457D;
+    border: 1px solid #202673;
+    color: #fff;
+}
+
+.b-desencriptar:hover {
+    background-color: #63668A;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(98, 102, 137, 0.2);
+}
+
+/* Transición visual al hacer clic en el botón de copiar */
+.b-copiar:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(31, 38, 114, 0.3);
+    background-color: #202673;
+    color: #fff;
+}
+/* Ajustes de estilos para el contenedor de mensaje encriptado */
+.encriptado.ajustar {
+    justify-content: space-between;
+}
+
+.titulo-mensaje.ajustar {
+    height: 70%;
+}
+
+/* Contenedor que muestra el texto encriptado o desencriptado */
+.encriptado {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    max-width: 100%;
+    min-height: 700px;
+    max-height: 80vh;
+    background: #D9B88F;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 40px; /* Ajusta la distancia desde el borde superior */
+    right: 30px; /* Ajusta la distancia desde el borde derecho */
+    }
+
+/* Estilos para el mensaje encriptado o desencriptado */
+.mensaje-encriptado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+    gap: 16px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+ }
+
+/* Estilo para el título del mensaje encriptado */
+.mensaje-encriptado h2 {
+    width: 80%;
+    font-weight: 700;
+    font-size: 30px;
+    color: #250d24;
+    margin: 0; /* Elimina margen para evitar cambios inesperados */
+    font-family: 'Monotype Corsiva';
+    
+    }
+
+/* Estilo para el párrafo que muestra el texto encriptado o desencriptado */
+.mensaje-encriptado p {
+    width: 80%;
+    font-weight: 400;
+    line-height: 150%;
+    margin: 0; /* Elimina margen para evitar cambios inesperados */
+    word-wrap: break-word; /* Asegura que las palabras largas se ajusten */
+    text-align: left;
+    width: 100%; /* Asegura que el texto ocupe todo el ancho disponible */
+    font-family: 'Lato', sans-serif; /* Fuente principal para textos largos */
+    font-size: 16px; /* Tamaño de fuente adecuado para lectura cómoda */
+    line-height: 1.6; /* Espaciado entre líneas para mejorar la legibilidad */
+    color: #300e0e; /* Color de texto que es fácil de leer */
+}
+
+/* Imagen decorativa de muñeco */
+.Muñeco {
+    width: 500px;
+    height: auto;
+    position: absolute;
+    top: 100px;
+}
+/* Estilos para el pie de página */
+.piePagina {
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+.piePagina p {
+    margin: 5px 0;
+}
+
+.piePagina a {
+    color: #202673;
+    text-decoration: none;
+}
+
+.piePagina a:hover {
+    text-decoration: underline;
+}
+
+/* Flores decorativas */
+.piePagina p:first-of-type,
+.piePagina p:last-of-type {
+    font-size: 24px;
+}
+/* Estilos para pantallas pequeñas (dispositivos móviles) */
+@media screen and (max-width: 57.5em) {
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }
+
+    .texto {
+        width: 100%; /* El área de texto ocupa todo el ancho del contenedor */
+        margin: 0;
+    }
+
+    .terminos {
+        width: 100%;
+        margin: 0;
+    }
+
+    .botones {
+        display: flex;
+        flex-direction: column; /* Botones uno debajo del otro */
+        gap: 10px;
+        width: 100%;
+        margin: 10px 0 0;
+    }
+
+    .b-encriptar, .b-desencriptar, .b-copiar {
+        width: 100%; /* Botones ocupan todo el ancho del contenedor */
+        max-width: none;
+    }
+
+    .encriptado {
+        position: static; /* Cambia a estático en pantallas pequeñas */
+        width: calc(100% - 20px); /* Ancho completo menos el margen */
+        max-width: none; /* Elimina el ancho máximo para pantallas pequeñas */
+        min-height: 40%;
+     }
+
+    
+    .Muñeco {
+        display: none; /* Oculta la imagen en pantallas pequeñas */
+    }
+
+    .mensaje-encriptado h2 {
+        margin-top: 0;
+        font-size: 18px;
+    }
+
+    .mensaje-encriptado p {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+}
+
+/* Estilos para pantallas medianas y grandes */
+@media screen and (min-width: 553px) {
+
+    .botones {
+        display: flex;
+        flex-direction: row; /* Los botones se alinean en fila */
+        gap: 20px;
+        width: calc(100% - 20px); /* Ancho completo menos el margen */
+    }
+
+    .b-encriptar, .b-desencriptar, .b-copiar {
+        width: calc((100% / 3) - 20px); /* Distribuye el ancho equitativamente */
+    
+    }}

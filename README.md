@@ -6,7 +6,7 @@ Bienvenido a nuestro sitio web de encriptación y desencriptación de texto. Nue
 
 ### ✨ Características Principales
 - 🔄 **Conversión Bidireccional**: Transforma una palabra en su versión encriptada y recupera la palabra original desde su versión encriptada.
- - Ejemplo: “gato” se convierte en “gaitober” y “gaitober” se convierte en “gato”.
+   Ejemplo: “gato” se convierte en “gaitober” y “gaitober” se convierte en “gato”.
 - 💡 **Interfaz Intuitiva**: Campos de texto para insertar el texto que será encriptado o desencriptado.
 - 🔐 **Opciones de Encriptación y Desencriptación**: El usuario puede elegir entre las dos opciones según su necesidad.
 - 📱 **Resultados en Pantalla**: El resultado de la encriptación o desencriptación se muestra directamente en la pantalla.

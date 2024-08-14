@@ -36,11 +36,11 @@ Bienvenido a nuestro sitio web de encriptación y desencriptación de texto. Nue
 5.  El resultado se mostrará en el área correspondiente en la pantalla.
 6.  Para copiar el resultado, hacer clic en el botón “Copiar” para agregarlo al portapapeles.
    
-![Inicio]([https://drive.google.com/file/d/1gZMhZWLLoU14IY8l9mlyrQ7NSjuVh9YB/view?usp=drive_link](https://drive.google.com/file/d/12nokkv2QspukJ9m_r66OQmvgiOztbUVE/view?usp=drive_link))
+![]([https://drive.google.com/file/d/1gZMhZWLLoU14IY8l9mlyrQ7NSjuVh9YB/view?usp=drive_link](https://drive.google.com/file/d/12nokkv2QspukJ9m_r66OQmvgiOztbUVE/view?usp=drive_link))
 
-![Ingresa texto](https://drive.google.com/file/d/1gZMhZWLLoU14IY8l9mlyrQ7NSjuVh9YB/view?usp=drive_link)
+![](https://drive.google.com/file/d/1gZMhZWLLoU14IY8l9mlyrQ7NSjuVh9YB/view?usp=drive_link)
 
-![Descencripta-Encripta](https://drive.google.com/file/d/1lj20-hY4dG6Gm0ymD3RKLqyjo_f2o43v/view?usp=drive_link)
+![](https://drive.google.com/file/d/1lj20-hY4dG6Gm0ymD3RKLqyjo_f2o43v/view?usp=drive_link)
 
 ## 📜 Licencia
 

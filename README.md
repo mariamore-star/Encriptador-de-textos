@@ -25,7 +25,7 @@ Bienvenido a nuestro sitio web de encriptación y desencriptación de texto. Nue
 
 1. Clonar el repositorio:
    ```bash
-   https://github.com/mariamore-star/Encriptador-de-textos.git` 
+   https://github.com/mariamore-star/Encriptador-de-textos.git 
 
 ## 📚 Uso
 
